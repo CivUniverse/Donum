@@ -1,23 +1,21 @@
 package com.github.civcraft.donum;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
-
 import com.github.civcraft.donum.database.DonumDAO;
 import com.github.civcraft.donum.inventories.DeathInventory;
 import com.github.civcraft.donum.inventories.DeliveryInventory;
 import com.github.civcraft.donum.misc.ItemMapBlobHandling;
 import com.github.civcraft.donum.storage.DatabaseStorage;
 import com.github.civcraft.donum.storage.IDeliveryStorage;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.scheduler.BukkitRunnable;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
 public class DonumManager {
 

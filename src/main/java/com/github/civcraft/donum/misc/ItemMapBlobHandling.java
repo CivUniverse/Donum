@@ -1,5 +1,6 @@
 package com.github.civcraft.donum.misc;
 
+import com.github.civcraft.donum.Donum;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -8,16 +9,13 @@ import java.io.InputStreamReader;
 import java.util.Map.Entry;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
-
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
-import com.github.civcraft.donum.Donum;
-
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
 /**
  * Collection of static utility methods to serialize/deserialize ItemMaps, so

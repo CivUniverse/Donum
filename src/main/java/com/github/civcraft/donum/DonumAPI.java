@@ -1,10 +1,9 @@
 package com.github.civcraft.donum;
 
 import java.util.UUID;
-
 import org.bukkit.inventory.ItemStack;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
 public class DonumAPI {
 

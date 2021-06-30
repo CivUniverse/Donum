@@ -1,15 +1,12 @@
 package com.github.civcraft.donum.storage;
 
+import com.github.civcraft.donum.Donum;
 import java.util.UUID;
-
 import net.md_5.bungee.api.ChatColor;
-
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
-import com.github.civcraft.donum.Donum;
-
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
 public abstract class IDeliveryStorage {
 	

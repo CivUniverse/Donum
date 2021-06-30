@@ -1,45 +1,34 @@
 package com.github.civcraft.donum.commands.commands;
 
-import java.util.List;
+import co.aikar.commands.BaseCommand;
+import co.aikar.commands.annotation.CommandAlias;
+import co.aikar.commands.annotation.CommandPermission;
+import co.aikar.commands.annotation.Description;
+import co.aikar.commands.annotation.Syntax;
+import com.github.civcraft.donum.gui.AdminDeliveryGUI;
 import java.util.UUID;
-
 import net.md_5.bungee.api.ChatColor;
-
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import vg.civcraft.mc.civmodcore.command.PlayerCommand;
 import vg.civcraft.mc.namelayer.NameAPI;
 
-import com.github.civcraft.donum.gui.AdminDeliveryGUI;
-public class Deliver extends PlayerCommand {
+@CommandAlias("deliver")
+@CommandPermission("donum.op")
+public class Deliver extends BaseCommand {
 
-	public Deliver(String name) {
-		super(name);
-		setIdentifier("deliver");
-		setDescription("Opens an inventory to which you can add items to forward them to the players delivery inventory");
-		setUsage("/deliver <playerName>");
-		setArguments(1, 1);
-	}
-
-	@Override
-	public boolean execute(CommandSender sender, String[] args) {
+	@Syntax("/deliver <player>")
+	@Description("Opens an inventory to which you can add items to forward them to the players delivery inventory")
+	public void execute(CommandSender sender, String targetPlayer) {
 		if (!(sender instanceof Player)) {
 			sender.sendMessage(ChatColor.RED + "No");
-			return true;
+			return;
 		}
 		//TODO make namelayer soft dependency
-		UUID delUUID = NameAPI.getUUID(args [0]);
+		UUID delUUID = NameAPI.getUUID(targetPlayer);
 		if (delUUID == null) {
-			sender.sendMessage(ChatColor.RED + "This player has never logged into civcraft");
-			return true;
+			sender.sendMessage(ChatColor.RED + "This player has never logged into the server");
+			return;
 		}
 		AdminDeliveryGUI.showInventory((Player) sender, delUUID);
-		return true;
-	}
-
-	@Override
-	public List<String> tabComplete(CommandSender arg0, String[] arg1) {
-		return null;
 	}
 }

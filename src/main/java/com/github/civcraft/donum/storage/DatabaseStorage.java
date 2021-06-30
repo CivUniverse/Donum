@@ -1,12 +1,9 @@
 package com.github.civcraft.donum.storage;
 
-import java.util.UUID;
-
-import org.bukkit.scheduler.BukkitRunnable;
-
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
-
 import com.github.civcraft.donum.Donum;
+import java.util.UUID;
+import org.bukkit.scheduler.BukkitRunnable;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
 public class DatabaseStorage extends IDeliveryStorage {
 
