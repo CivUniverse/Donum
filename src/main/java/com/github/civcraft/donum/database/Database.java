@@ -59,7 +59,7 @@ public class Database {
 	public boolean connect() {
 		String jdbc = "jdbc:mysql://" + host + ":" + port + "/" + db + "?user=" + user + "&password=" + password;
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").getConstructor().newInstance();
 		} catch (Exception ex) {
 			logger.log(Level.SEVERE, "Failed to initialize JDBC driver.");
 		}

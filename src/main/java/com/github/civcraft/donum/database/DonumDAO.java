@@ -1,5 +1,8 @@
 package com.github.civcraft.donum.database;
 
+import com.github.civcraft.donum.Donum;
+import com.github.civcraft.donum.inventories.DeathInventory;
+import com.github.civcraft.donum.misc.ItemMapBlobHandling;
 import java.sql.Blob;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,16 +12,9 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
-
 import javax.sql.rowset.serial.SerialBlob;
-
 import org.bukkit.Bukkit;
-
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
-
-import com.github.civcraft.donum.Donum;
-import com.github.civcraft.donum.inventories.DeathInventory;
-import com.github.civcraft.donum.misc.ItemMapBlobHandling;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
 public class DonumDAO {
 

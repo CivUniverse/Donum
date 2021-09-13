@@ -1,8 +1,8 @@
 package com.github.civcraft.donum.inventories;
 
 import java.util.UUID;
+import vg.civcraft.mc.civmodcore.inventory.items.ItemMap;
 
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
 public class DeliveryInventory extends AbstractInventoryStorage {
 	
